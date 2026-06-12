@@ -8,15 +8,16 @@ public class Medico extends Profissional {
 	}
 
 	public void setEspecialidade(String especialidade) {
-		if (especialidade!= null && !especialidade.trim().isBlank()) {
+		if (especialidade != null && !especialidade.trim().isBlank()) {
 			this.especialidade = especialidade;
+		} else {
+			System.out.println("Especialidade invalida");
 		}
 	}
+
 	@Override
 	public void exibirDados() {
-		System.out.println("nome: " + getNome());
-		System.out.println("registro: " + getRegistro());
-		System.out.println("turno: " + getTurno());
+		super.exibirDados();
 		System.out.println("Especialidade: " + getEspecialidade());
 	}
 }

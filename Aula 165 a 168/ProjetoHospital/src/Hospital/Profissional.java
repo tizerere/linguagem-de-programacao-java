@@ -9,7 +9,9 @@ public class Profissional {
 
 	public void setNome(String nome) {
 		if (nome != null && !nome.trim().isBlank()) {
-			this.nome = nome;			
+			this.nome = nome;
+		} else {
+			System.out.println("nome invalido");
 		}
 	}
 
@@ -18,8 +20,10 @@ public class Profissional {
 	}
 
 	public void setRegistro(String registro) {
-		if (registro!= null && !registro.isBlank()) {
+		if (registro != null && !registro.isBlank()) {
 			this.registro = registro;
+		} else {
+			System.out.println("Registro invalido");
 		}
 	}
 
@@ -28,11 +32,13 @@ public class Profissional {
 	}
 
 	public void setTurno(String turno) {
-		if (turno!= null && !turno.isBlank()) {
+		if (turno != null && !turno.isBlank()) {
 			this.turno = turno;
+		} else {
+			System.out.println("turno inavlido");
 		}
 	}
-	
+
 	public void exibirDados() {
 		System.out.println("nome: " + getNome());
 		System.out.println("registro: " + getRegistro());

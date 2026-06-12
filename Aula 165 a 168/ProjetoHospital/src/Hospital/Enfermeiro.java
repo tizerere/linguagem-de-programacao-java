@@ -10,14 +10,15 @@ public class Enfermeiro extends Profissional {
 	public void setSetor(String setor) {
 		if (setor!= null && !setor.trim().isBlank()) {
 			this.setor = setor;
+		}else {
+			System.out.println("Setor inavlido");
 		}
 	}
+
 	@Override
 	public void exibirDados() {
-		System.out.println("nome: " + getNome());
-		System.out.println("registro: " + getRegistro());
-		System.out.println("turno: " + getTurno());
+		super.exibirDados();
 		System.out.println("Setor: " + getSetor());
 	}
-	
+
 }
